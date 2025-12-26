@@ -3,6 +3,5 @@ class Solution:
         result = []
         max_candy = max(candies)  
         for x in candies:
-            temp = x + extraCandies
-            result.append(temp >= max_candy)
+            result.append((x + extraCandies) >= max_candy)
         return result
