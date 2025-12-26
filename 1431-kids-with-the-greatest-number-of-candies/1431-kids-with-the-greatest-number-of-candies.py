@@ -1,15 +1,11 @@
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        result = []
-        i = 0  
+        result = []  
         for x in candies:
-            temp = candies[i] + extraCandies 
-            j = 0
+            temp = x + extraCandies
             n = 1
             for y in candies: 
-                if(temp < candies[j]): 
+                if(temp < y): 
                     n = 0
-                j += 1 
             result.append(bool(n))
-            i += 1
         return result
